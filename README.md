@@ -1,5 +1,5 @@
 
-# PRINCE-MDXI WhatsApp Bot 🌝💚
+# SIGMA-MDX WhatsApp Bot 🌝💚
 
 ![Bot Image](https://imgur.com/a/Dm3PqJ9)
 
