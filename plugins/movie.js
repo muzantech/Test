@@ -55,7 +55,7 @@ async (conn, mek, m, { from, reply, sender, args }) => {
             from,
             {
                 image: { 
-                    url: movie.poster && movie.poster !== 'N/A' ? movie.poster : 'https://imgur.com/a/Dm3PqJ9'
+                    url: movie.poster && movie.poster !== 'N/A' ? movie.poster : 'https://cdn.giftedtech.web.id/file/nqCsY.jpg'
                 },
                 caption: dec,
                 contextInfo: getContextInfo(m.sender)

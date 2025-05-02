@@ -45,7 +45,7 @@ cmd({
 await conn.sendMessage(
             from,
             {
-                image: { url: `https://imgur.com/a/Pfwbd9c` },
+                image: { url: `https://cdn.giftedtech.web.id/file/mBqBn.jpg` },
                 caption: message,
                 
             },

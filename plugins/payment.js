@@ -76,7 +76,7 @@ cmd({
 }, 
 async (conn, mek, m, { from, reply }) => {
   try {
-    const opayImage = "https://imgur.com/a/Dm3PqJ9"; // Image URL
+    const opayImage = "https://cdn.giftedtech.web.id/file/nqCsY.jpg"; // Image URL
     const accountNumber = "8029389865";
     const accountName = "Amina Mohammed";
     const bankName = "Opay";
