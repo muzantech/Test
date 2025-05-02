@@ -1,0 +1,36 @@
+{
+  "bot-name": "SIGMA-MDX",
+  "description": "ᴊᴀᴠᴀsᴄʀɪᴘᴛ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍᴜᴢᴀɴ sɪɢᴍᴀ",
+  "logo": "https://imgur.com/a/Pfwbd9c",
+  "keywords": ["bot"],
+  "documentation-link": "h",
+  "owner-verification": "p",
+  
+  "env": {
+    "SESSION_ID": {
+      "description": "Put your SESSION_ID here. Make sure it starts with sigma-md-",
+      "value": "",
+      "required": true
+    },
+    "PREFIX": {
+      "description": "Bot command prefix, (e.g, . , ! @ etc)",
+      "value": ".",
+      "required": true
+    },
+"OWNER_NAME": {
+      "description": "Type Bot Owner Name( your name).",
+      "required": false,
+      "value": "ᴍᴜᴢᴀɴ sɪɢᴍᴀ"
+}, 
+    "OWNER_NUMBER": {
+      "description": "put the owner number for bot(you number eg 32466304227).",
+      "required": false,
+      "value": "32466304227"
+    }, 
+    "MODE": {
+      "description": "Bot mode can be public or private,  (in lowercase) (e.g., public)",
+      "value": "private",
+      "required": true
+    }
+  }
+}
