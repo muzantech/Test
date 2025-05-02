@@ -24,7 +24,7 @@ const {
     Browsers
   } = require('@whiskeysockets/baileys')
   
-const MENU_IMG = "https://imgur.com/a/Pfwbd9c"
+const MENU_IMG = "https://cdn.giftedtech.web.id/file/mBqBn.jpg"
   
   const l = console.log
   const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson } = require('./lib/functions')
@@ -145,7 +145,7 @@ conn.sendMessage(conn.user.id, { image: { url: MENU_IMG }, caption: up })
         try {
           pfp = await conn.profilePictureUrl(update.id, 'image');
         } catch (err) {
-          pfp = "https://imgur.com/a/Dm3PqJ9";
+          pfp = "https://cdn.giftedtech.web.id/file/nqCsY.jpg";
         }
 
         const welcomeMsg = `✨ *Welcome to the squad, ${tagUser}! 🎉* ✨
