@@ -29,7 +29,7 @@ async (conn, mek, m, { from }) => {
 
         // Send the owner contact message with image and audio
         await conn.sendMessage(from, {
-            image: { url: 'https://imgur.com/a/Dm3PqJ9' }, // Image URL from your request
+            image: { url: 'https://cdn.giftedtech.web.id/file/mBqBn.jpg' }, // Image URL from your request
             caption: `╭──〔  SIGMA-MDX  〕──╮
 │  Owner Information:    
 │  ╭───────────────╮
