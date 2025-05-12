@@ -2,9 +2,9 @@ const { cmd } = require("../command");
 
 cmd({
   pattern: "vv",
-  alias: ["viewonce", 'retrive',"😂"],
+  alias: ["viewonce", 'retrive', "😂"],
   react: '👀',
-  desc: "Owner Only - retrieve quoted message back to user",
+  desc: "Owner Only - retrieve quoted view once message",
   category: "owner",
   filename: __filename
 }, async (client, message, match, { from, isOwner }) => {
@@ -17,48 +17,56 @@ cmd({
 
     if (!match.quoted) {
       return await client.sendMessage(from, {
-        text: "*🍁 Please reply to a view once message!*\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍᴜᴢᴀɴ ꜱɪɢᴍᴀ "
+        text: "*🍁 Please reply to a view once message!*"
       }, { quoted: message });
     }
 
-    const buffer = await match.quoted.download();
-    const mtype = match.quoted.mtype;
-    const options = { quoted: message };
+    // Extraire le vrai message s'il est encapsulé dans viewOnce
+    const viewOnce = match.quoted.message?.viewOnceMessage?.message;
+    const msgContent = viewOnce || match.quoted.message;
+    const msgType = Object.keys(msgContent || {})[0];
+    const media = msgContent?.[msgType];
+
+    if (!["imageMessage", "videoMessage", "audioMessage"].includes(msgType)) {
+      return await client.sendMessage(from, {
+        text: "❌ Only image, video, and audio messages are supported."
+      }, { quoted: message });
+    }
+
+   // by crazy
+    const buffer = await client.downloadMediaMessage({ message: msgContent });
 
     let messageContent = {};
-    switch (mtype) {
+    switch (msgType) {
       case "imageMessage":
         messageContent = {
           image: buffer,
-          caption: match.quoted.text || '',
-          mimetype: match.quoted.mimetype || "image/jpeg"
+          caption: media.caption || '',
+          mimetype: media.mimetype || "image/jpeg"
         };
         break;
       case "videoMessage":
         messageContent = {
           video: buffer,
-          caption: match.quoted.text || '',
-          mimetype: match.quoted.mimetype || "video/mp4"
+          caption: media.caption || '',
+          mimetype: media.mimetype || "video/mp4"
         };
         break;
       case "audioMessage":
         messageContent = {
           audio: buffer,
           mimetype: "audio/mp4",
-          ptt: match.quoted.ptt || false
+          ptt: media.ptt || false
         };
         break;
-      default:
-        return await client.sendMessage(from, {
-          text: "❌ Only image, video, and audio messages are supported"
-        }, { quoted: message });
     }
 
-    await client.sendMessage(from, messageContent, options);
+    await client.sendMessage(from, messageContent, { quoted: message });
+
   } catch (error) {
     console.error("vv Error:", error);
     await client.sendMessage(from, {
-      text: "❌ Error fetching vv message:\n" + error.message
+      text: "❌ Error fetching view once message:\n" + error.message
     }, { quoted: message });
   }
 });
