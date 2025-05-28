@@ -145,7 +145,7 @@ conn.sendMessage(conn.user.id, { image: { url: MENU_IMG }, caption: up })
         try {
           pfp = await conn.profilePictureUrl(update.id, 'image');
         } catch (err) {
-          pfp = "https://cdn.giftedtech.web.id/file/nqCsY.jpg";
+          pfp = "https://files.catbox.moe/iw9ar0.jpg";
         }
 
         const welcomeMsg = `✨ *Welcome to the squad, ${tagUser}! 🎉* ✨
