@@ -24,7 +24,7 @@ const {
     Browsers
   } = require('@whiskeysockets/baileys')
   
-const MENU_IMG = "https://cdn.giftedtech.web.id/file/mBqBn.jpg"
+const MENU_IMG = "https://files.catbox.moe/iw9ar0.jpg"
   
   const l = console.log
   const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson } = require('./lib/functions')
