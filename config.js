@@ -33,9 +33,9 @@ OWNER_NAME: process.env.OWNER_NAME || "ᴍᴜᴢᴀɴ sɪɢᴍᴀ",
 // add bot owner name
 DESCRIPTION: process.env.DESCRIPTION || "ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍᴜᴢᴀɴ ꜱɪɢᴍᴀ  ",
 // add bot owner name    
-ALIVE_IMG: process.env.ALIVE_IMG || "https://cdn.giftedtech.web.id/file/mBqBn.jpg",
+ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/zpg9wv.jpg",
 // add img for alive msg
-MENU_IMG: process.env.MENU_IMG || "https://cdn.giftedtech.web.id/file/mBqBn.jpg",
+MENU_IMG: process.env.MENU_IMG || "https://files.catbox.moe/iw9ar0.jpg",
 // menu image 
 WELCOME_ENABLED: process.env.WELCOME_ENABLED || "true",
     // welcome group members 
