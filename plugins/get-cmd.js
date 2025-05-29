@@ -46,7 +46,7 @@ ${truncatedCode}
 
         // Send image with truncated source code
         await conn.sendMessage(from, { 
-            image: { url: `https://cdn.giftedtech.web.id/file/nqCsY.jpg` },  // Image URL
+            image: { url: `https://files.catbox.moe/zpg9wv.jpg` },  // Image URL
             caption: formattedCode,
             contextInfo: getContextInfo(m.sender)
         }, { quoted: mek });
